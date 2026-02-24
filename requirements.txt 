@@ -1,6 +1,6 @@
 streamlit
 openai
 python-dotenv
-import PyPDF2
+PyPDF2
 chromadb
 langchain

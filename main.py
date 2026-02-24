@@ -1,5 +1,5 @@
 import os
-import PyPDF2
+import pypdf
 from retriever import store_chunks
 from rag_analyzer import analyze_risk
 
@@ -15,7 +15,7 @@ def extract_text_from_pdf(path):
     
     text = ""
     with open(path, "rb") as f:
-        reader = PyPDF2.PdfReader(f)
+        reader = pypdf.PdfReader(f)
         for page in reader.pages:
             t = page.extract_text()
             if t: text += t + "\n"
